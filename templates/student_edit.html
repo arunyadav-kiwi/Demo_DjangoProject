@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+<title>Edit</title>
+</br>
+<div class="container">
+    <form method="POST">
+        {% csrf_token %}
+        <div class="mb-3">
+            <input type="text" class="form-control" name="register_no" placeholder="{{ student_obj.register_no }}"
+                value="{{student_obj.register_no}}">
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" name="full_name" placeholder="{{ student_obj.full_name }}"
+                value="{{student_obj.full_name}}">
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" name="email" placeholder="{{ student_obj.email }}"
+                value="{{student_obj.email}}">
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" name="father_name" placeholder="{{ student_obj.father_name }}"
+                value="{{student_obj.father_name}}">
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" name="birth_date" placeholder="{{ student_obj.birth_date }}"
+                value="{{student_obj.birth_date}}">
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" name="mobile_no" placeholder="{{ student_obj.mobile_no }}"
+                value="{{student_obj.mobile_no}}">
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" name="address" placeholder="{{ student_obj.address }}"
+                value="{{student_obj.address}}">
+        </div>
+        <button type="submit" class="btn btn-primary">Edit student</button>
+    </form>
+</div>
+{% endblock %}
